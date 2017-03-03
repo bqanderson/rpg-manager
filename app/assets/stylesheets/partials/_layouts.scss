@@ -1,0 +1,47 @@
+header {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: display-color('white');
+  border-bottom: 1px solid #eee;
+  opacity: 0.95;
+  @extend %clearfix;
+  .header-row {
+    @include row();
+    width: 95%;
+    margin: 0 auto;
+  }
+  .header-nav {
+    @include col(1, 1);
+  }
+}
+
+section {
+  padding: $base-line-height * 4 0;
+}
+
+.gallery-row {
+  @include row();
+}
+
+.gallery-item {
+  @include col(1, 3, $base-line-height * 0.125);
+  text-align: center;
+}
+
+.product-wrapper {
+  border: 1px solid display-color('white');
+  padding-bottom: $base-line-height * 2;
+  &:hover {
+    border-color: #ddd;
+  }
+}
+
+.product-img {
+  padding: $base-line-height * 0.5 0;
+  max-width: 75%;
+  text-align: center;
+}

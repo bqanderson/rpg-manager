@@ -1,0 +1,29 @@
+.menu-button {
+  display: inline-block;
+  padding: $base-line-height;
+  float: left;
+}
+//
+// .burger-icon {
+//   @include burger(30px, 3px, 9px, display-color('blue'));
+// }
+//
+// .menu-button.is-active .burger-icon {
+//   @include burger-to-cross;
+// }
+
+.mybtn {
+  display: inline-block;
+  @include type-setting(-1);
+  appearance: none;
+  background: none;
+  color: display-color('light-blue');
+  border: solid 1px display-color('light-blue');
+  padding: 0 1rem;
+  margin-right: $base-line-height * 0.5;
+  @include transition(all 0.3s);
+  &:hover {
+    background-color: display-color('light-blue');
+    color: display-color('white');
+  }
+}

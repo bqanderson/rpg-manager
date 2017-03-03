@@ -1,0 +1,180 @@
+/*============================================================================
+  #forms
+==============================================================================*/
+
+form{
+  margin:0;
+
+  input:not(.button):not(.linkButton):not([type="radio"]):not([type="checkbox"]):not(.qtyInput),textarea{
+    @include type-setting(-1);
+    border: solid 1px display-color('light-blue');
+    padding: 0 1rem;
+    outline:none;
+    margin:0 0 $base-line-height;
+    -webkit-appearance:none;
+
+    &:not(textarea){
+      padding: 0 1rem;
+    }
+    @include placeholder {
+      color: display-color('grey');
+    }
+    &:focus{
+      border-color: display-color('blue');
+    }
+  }
+
+  p label{
+    margin:0 10px 0 0;
+  }
+
+  textarea{
+    padding:10px;
+  }
+}
+
+// .form-select-wrapper {
+//   position: relative;
+//   display: block;
+//   width: 100%;
+//   padding: 5px 10px;
+//   margin:0 0 20px;
+//   border: 1px solid $borderColorDarken;
+//   border-radius: 5px;
+//   background-color: mix($colorBackground, $borderColorDarken, 80%);
+//   font-size: 1.4rem;
+//   cursor: pointer;
+//   outline: none;
+//   font-family:$accentFontStack;
+//   height:50px;
+//   text-align: left;
+//
+//   .selected-text { line-height: 40px; }
+//
+//   &:after {
+//     content: "";
+//     position: absolute;
+//     right: 12px;
+//     top: 50%;
+//     margin-top: -1px;
+//     border-top: 3px solid display-color('black');
+//     border-left: 3px solid transparent;
+//     border-right: 3px solid transparent;
+//   }
+//
+//   select {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 2;
+//     width: 100%;
+//     height: 100%;
+//     cursor: pointer;
+//     opacity: 0;
+//     -webkit-appearance: none;
+//   }
+// }
+
+// label{
+//   text-transform:uppercase;
+//   letter-spacing:1px;
+//   font-size:1.2rem;
+//   color:darken($borderColor,20%);
+//   display:inline-block;
+//   margin:0 0 10px 0;
+//   font-family: $metaFontStack;
+// }
+
+.formWrap{
+  &.contactForm{
+   padding-top:40px;
+  }
+
+  .button{
+    width:100%;
+  }
+
+  input{
+    &[type="checkbox"]{
+      margin:0;
+      vertical-align: middle;
+    }
+  }
+
+  form{
+    a{
+      display:block;
+      color: display-color('blue');
+      margin:20px auto 0;
+      text-decoraiton:underline;
+    }
+  }
+
+  label{
+    &:not(.showLabel){
+      text-align:left;
+      margin:0 0 10px;
+      display:none;
+    }
+
+    .showLabel{
+      display:inline-block;
+      vertical-align:middle;
+      margin:0 0 0 10px;
+    }
+  }
+
+  .pagination{
+    padding:0;
+    span:not(:last-child){
+      margin:0 10px 0 0;
+    }
+  }
+
+  .errors{
+    color:red;
+    padding:0 0 20px;
+  }
+}
+
+.addressLabel{
+  max-width:350px;
+  border-bottom:1px solid display-color('grey');
+  margin:0 auto 20px auto;
+}
+
+input.qtyInput{
+  width:40px;
+  height:40px;
+  border:1px solid display-color('grey');
+  padding:2px 0px 2px 4px;
+  margin:0 auto;
+  display:block;
+  text-align:center;
+  outline:none;
+  &:focus{
+    ::-webkit-inner-spin-button {
+  opacity: 1
+    }
+  }
+}
+
+.new_tale, .edit_character{
+  input[type="submit"]{
+    display: inline-block;
+    @include type-setting(-1);
+    appearance: none;
+    background-color: display-color('blue');
+    color: display-color('white');
+    border: solid 1px display-color('blue');
+    padding: 0 1rem;
+    margin-right: $base-line-height * 0.5;
+    @include transition(all 0.3s);
+    &:hover {
+      background: none;
+      color: display-color('blue');
+    }
+  }
+}

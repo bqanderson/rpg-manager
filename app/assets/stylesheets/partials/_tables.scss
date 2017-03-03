@@ -1,0 +1,38 @@
+///BASIC TABLE STYLING
+table {
+	@include type-setting(0);
+	border-collapse: collapse;
+	width: 100%;
+	float: left;
+   margin: 0 0 2em;
+	thead {
+		border-bottom: 2px solid display-color('blue');
+		th {
+			padding: 0 0 $base-line-height * 0.5 0;
+      font-weight: $bold;
+			text-align: left;
+		}
+
+	}
+
+	tbody {
+		border-bottom: 2px solid display-color('light-blue');
+		tr {
+			border-bottom: 1px solid display-color('light-blue');
+
+			td {
+        font-weight: $light;
+				padding: $base-line-height * 0.25 0;
+			}
+		}
+	}
+
+	tfoot {
+		td {
+			padding: 0.35em 0 .35em;
+
+			text-align: left;
+			font-size: 1.25em;
+		}
+	}
+}
