@@ -7,7 +7,7 @@ $black: 900;
 // Display fonts
 .super-heading {
   @include type-setting(3);
-  color: display-color('blue');
+  color: display-color('maastricht-blue');
   font-weight: $bold;
   text-transform: uppercase;
   letter-spacing: 0.5rem;

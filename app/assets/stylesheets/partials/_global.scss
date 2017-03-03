@@ -19,10 +19,10 @@ html {
 
 a {
     text-decoration: none;
-		color: display-color('light-blue');
+		color: display-color('maastricht-blue');
     @include transition(color 0.3s);
 		&:hover {
-			color: display-color('blue');
+			color: display-color('max-bluegreen');
 		}
 
 }
