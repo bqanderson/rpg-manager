@@ -17,13 +17,13 @@
   @include type-setting(-1);
   appearance: none;
   background: none;
-  color: display-color('light-blue');
-  border: solid 1px display-color('light-blue');
+  color: display-color('maastricht-blue');
+  border: solid 1px display-color('maastricht-blue');
   padding: 0 1rem;
   margin-right: $base-line-height * 0.5;
   @include transition(all 0.3s);
   &:hover {
-    background-color: display-color('light-blue');
-    color: display-color('white');
+    background-color: display-color('maastricht-blue');
+    color: display-color('max-bluegreen');
   }
 }
