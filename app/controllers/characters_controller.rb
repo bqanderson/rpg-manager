@@ -3,11 +3,15 @@ class CharactersController < ApplicationController
     @characters = Character.all
   end
 
+  def new
+    @character = Character.new
+  end
+
   def create
     @character = Character.new(character_params)
 
     if @character.save
-      render json: @character
+      render json: @characters
     else
       render json: @character.errors, status: :unprocessable_entity
     end
