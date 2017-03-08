@@ -2,7 +2,7 @@
   getInitialState: ->
     name: ''
     class_type: ''
-    leve: ''
+    level: ''
     race: ''
     alignment: ''
     deity: ''
@@ -23,15 +23,11 @@
   handleSubmit: (e) ->
     e.preventDefault()
     $.post '/characters', { character: @state }, (data) =>
-      @props.handleNewCharacter data
       @setState @getInitialState()
     , 'JSON'
 
   render: ->
     React.DOM.div null,
-      React.DOM.h1
-        className: 'heading-1'
-        'New Character'
       React.DOM.form
         className: 'new_character'
         onSubmit: @handleSubmit
