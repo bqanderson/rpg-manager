@@ -5,6 +5,7 @@
   <div class="container">
     <section>
       <%= react_component 'Characters', { data: @characters } %>
+      <%= link_to 'Home', '/', class: "mybtn" %><%= link_to 'Add a new character', new_character_path, class: "mybtn" %>
     </section>
   </div>
 </main>

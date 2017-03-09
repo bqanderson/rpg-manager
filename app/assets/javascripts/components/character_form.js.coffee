@@ -25,6 +25,7 @@
     $.post '/characters', { character: @state }, (data) =>
       @setState @getInitialState()
     , 'JSON'
+    window.location.href = '/characters'
 
   render: ->
     React.DOM.div null,
