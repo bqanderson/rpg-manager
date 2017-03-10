@@ -17,6 +17,12 @@ class CharactersController < ApplicationController
     end
   end
 
+  def destroy
+    @character = Character.find(params[:id])
+    @character.destroy
+    head :no_content
+  end
+
   private
     def character_params
       params.require(:character).permit(:name, :class_type, :level, :race, :alignment)
