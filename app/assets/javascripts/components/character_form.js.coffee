@@ -140,5 +140,5 @@
         React.DOM.p null,
           React.DOM.button
             type: 'submit'
-            className: 'mybtn'
+            className: 'mybtn btn-primary'
             'Creat Character'

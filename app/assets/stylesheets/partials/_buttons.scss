@@ -16,14 +16,26 @@
   display: inline-block;
   @include type-setting(-1);
   appearance: none;
-  background: none;
-  color: display-color('maastricht-blue');
-  border: solid 1px display-color('maastricht-blue');
   padding: 0 1rem;
   margin-right: $base-line-height * 0.5;
   @include transition(all 0.3s);
+}
+
+.btn-primary {
+  background-color: display-color('maastricht-blue');
+  color: display-color('baby-powder');
+  border: solid 1px display-color('maastricht-blue');
   &:hover {
-    background-color: display-color('maastricht-blue');
+    background-color: display-color('baby-powder');
+    color: display-color('maastricht-blue');
+  }
+}
+.btn-danger {
+  background: none;
+  color: display-color('rose-madder');
+  border: solid 1px display-color('rose-madder');
+  &:hover {
+    background-color: display-color('rose-madder');
     color: display-color('baby-powder');
   }
 }

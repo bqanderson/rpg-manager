@@ -1,13 +1,21 @@
 @Characters = React.createClass
   getInitialState: ->
     characters: @props.data
+
   getDefaultProps: ->
     characters: []
+
+  addCharacter: (character) ->
+    characters = @state.characters.slice()
+    characters.push character
+    @setState characters: characters
+
   deleteCharacter: (character) ->
     characters = @state.characters.slice()
     index = characters.indexOf character
     characters.splice index, 1
     @replaceState characters: characters
+
   render: ->
     React.DOM.div null,
       React.DOM.h1
