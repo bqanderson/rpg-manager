@@ -30,12 +30,21 @@
     color: display-color('maastricht-blue');
   }
 }
-.btn-danger {
+.btn-secondary {
   background: none;
-  color: display-color('rose-madder');
+  color: display-color('max-bluegreen');
+  border: solid 1px display-color('max-bluegreen');
+  &:hover {
+    background-color: display-color('max-bluegreen');
+    color: display-color('baby-powder');
+  }
+}
+.btn-danger {
+  background-color: display-color('rose-madder');
+  color: display-color('baby-powder');
   border: solid 1px display-color('rose-madder');
   &:hover {
-    background-color: display-color('rose-madder');
-    color: display-color('baby-powder');
+    background: none;
+    color: display-color('rose-madder');
   }
 }

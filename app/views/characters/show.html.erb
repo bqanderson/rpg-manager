@@ -1,0 +1,13 @@
+<%= render 'welcome/header' %>
+
+
+<main>
+  <div class="container">
+    <section>
+      <%= react_component 'ShowCharacter', { data: @character } %>
+
+      <%= link_to 'Home', '/', class: "mybtn btn-primary" %>
+      <%= link_to 'Add a new character', new_character_path, class: "mybtn btn-primary" %>
+    </section>
+  </div>
+</main>
