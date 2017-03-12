@@ -5,7 +5,7 @@
       method: 'DELETE'
       url: "/characters/#{ @props.character.id }"
       dataType: 'json'
-      success: () ->
+      success: (data) =>
         @props.handleDeleteCharacter @props.character
 
   render: ->

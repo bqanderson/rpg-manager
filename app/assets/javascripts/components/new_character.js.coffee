@@ -8,4 +8,4 @@
       React.DOM.p
         className: 'paragraph'
         'Creating a new Dungeons and Dragons characer can be as much fun as coding in Ruby on Rails!'
-      React.createElement CharacterForm, handleNewCharacter: @addCharacter
+      React.createElement CharacterForm
