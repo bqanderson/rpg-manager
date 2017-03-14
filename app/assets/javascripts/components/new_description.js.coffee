@@ -1,20 +1,22 @@
-@CharacterForm = React.createClass
+@NewDescrtiption = React.createClass
   getInitialState: ->
-    name: ''
-    class_type: ''
-    level: ''
-    race: ''
-    alignment: ''
-    deity: ''
-    size: ''
-    age: ''
-    gender: ''
-    height: ''
-    weight: ''
-    eyes: ''
-    hair: ''
-    skin: ''
-    bio: ''
+    description: {
+      name: ''
+      class_type: ''
+      level: ''
+      race: ''
+      alignment: ''
+      deity: ''
+      size: ''
+      age: ''
+      gender: ''
+      height: ''
+      weight: ''
+      eyes: ''
+      hair: ''
+      skin: ''
+      bio: ''
+    }
 
   handleChange: (e) ->
     name = e.target.name
@@ -22,9 +24,8 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post '/characters', { character: @state }, (data) =>
-      @setState @getInitialState()
-    , 'JSON'
+    $.post '/characters', { character: @state }, (description) =>
+      'JSON'
     window.location.href = '/characters'
 
   render: ->
@@ -138,7 +139,7 @@
             value: @state.bio
             onChange: @handleChange
         React.DOM.p null,
-          React.DOM.button
-            type: 'submit'
+          React.DOM.a
             className: 'mybtn btn-primary'
-            'Creat Character'
+            onClick: @handleSubmit
+            'Create Character'

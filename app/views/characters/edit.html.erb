@@ -4,7 +4,7 @@
 <main>
   <div class="container">
     <section>
-      <%= react_component 'CharacterSheet', { description: @character } %>
+      <%= react_component 'EditCharacter', { description: @character } %>
 
       <%= link_to 'Home', '/', class: "mybtn btn-primary" %>
       <%= link_to 'Add a new character', new_character_path, class: "mybtn btn-primary" %>

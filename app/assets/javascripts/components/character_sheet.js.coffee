@@ -1,6 +1,6 @@
-@ShowCharacter = React.createClass
+@CharacterSheet = React.createClass
   getInitialState: ->
-    @props.data
+    @props.description
 
   render: ->
     React.DOM.div null,
@@ -10,8 +10,12 @@
       React.DOM.p
         className: 'paragraph'
         'Name: '
-        @props.data.name
+        @props.description.name
       React.DOM.p
         className: 'paragraph'
         'Class: '
-        @props.data.class_type
+        @props.description.class_type
+      React.DOM.p
+        className: 'paragraph'
+        'Level: '
+        @props.description.level

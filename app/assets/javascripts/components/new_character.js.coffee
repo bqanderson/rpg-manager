@@ -1,5 +1,4 @@
 @NewCharacter = React.createClass
-
   render: ->
     React.DOM.div null,
       React.DOM.h1
@@ -8,4 +7,4 @@
       React.DOM.p
         className: 'paragraph'
         'Creating a new Dungeons and Dragons character can be as much fun as coding in Ruby on Rails!'
-      React.createElement CharacterForm
+      React.createElement NewDescrtiption

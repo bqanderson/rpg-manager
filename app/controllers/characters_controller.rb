@@ -11,11 +11,25 @@ class CharactersController < ApplicationController
     @character = Character.new
   end
 
+  def edit
+    @character = Character.find(params[:id])
+  end
+
   def create
     @character = Character.new(character_params)
 
     if @character.save
       render json: @characters
+    else
+      render json: @character.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @character = Character.find(params[:id])
+
+    if @character.update(character_params)
+      render json: @character
     else
       render json: @character.errors, status: :unprocessable_entity
     end

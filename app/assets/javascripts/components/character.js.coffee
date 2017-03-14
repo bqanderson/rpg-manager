@@ -11,6 +11,9 @@
   handleView: (e) ->
     window.location.href = "/characters/#{ @props.character.id }"
 
+  handleEdit: (e) ->
+    window.location.href = "/characters/#{ @props.character.id }/edit"
+
   render: ->
     React.DOM.tr null,
       React.DOM.td null, @props.character.name
@@ -23,6 +26,7 @@
           'View'
         React.DOM.a
           className: 'mybtn btn-secondary'
+          onClick: @handleEdit
           'Edit'
         React.DOM.a
           className: 'mybtn btn-danger'
