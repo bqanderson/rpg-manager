@@ -29,7 +29,7 @@
       bio: ReactDOM.findDOMNod(@refs.bio).value
     $.ajax
       method: 'PUT'
-      url: "/characters/#{ @props.character.id }"
+      url: "/characters/#{ @props.description.id }"
       dataType: 'JSON'
       data:
         character: description
@@ -40,7 +40,7 @@
     React.DOM.div null,
       React.DOM.h1
         className: 'heading-1'
-        @props.description.name
+        @state.name
       React.DOM.form
         className: 'new_character'
         onSubmit: @handleSubmit
