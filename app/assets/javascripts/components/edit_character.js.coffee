@@ -2,8 +2,8 @@
   getInitialState: ->
     @props.description
 
-  getDefaultProps: ->
-    characters: []
+  # getDefaultProps: ->
+  #   characters: []
 
   handleChange: (e) ->
     name = e.target.name
@@ -12,29 +12,29 @@
   handleUpdate: (e) ->
     e.preventDefault()
     description =
-      name: ReactDOM.findDOMNode(@refs.name).value
-      class_type: ReactDOM.findDOMNode(@refs.class_type).value
-      level: ReactDOM.findDOMNode(@refs.level).value
-      race: ReactDOM.findDOMNode(@refs.race).value
-      alignment: ReactDOM.findDOMNode(@refs.alignment).value
-      deity: ReactDOM.findDOMNode(@refs.deity).value
-      size: ReactDOM.findDOMNode(@refs.size).value
-      age: ReactDOM.findDOMNode(@refs.age).value
-      gender: ReactDOM.findDOMNode(@refs.gender).value
-      height: ReactDOM.findDOMNode(@refs.height).value
-      weight: ReactDOM.findDOMNode(@refs.weight).value
-      eyes: ReactDOM.findDOMNod(@refs.eyes).value
-      hair: ReactDOM.findDOMNod(@refs.hair).value
-      skin: ReactDOM.findDOMNod(@refs.skin).value
-      bio: ReactDOM.findDOMNod(@refs.bio).value
+      name: @props.description.name
+      class_type: @state.class_type
+      level: @state.level
+      race: @state.race
+      alignment: @state.alignment
+      deity: @state.deity
+      size: @state.size
+      age: @state.age
+      gender: @state.gender
+      height: @state.height
+      weight: @state.weight
+      eyes: @state.eyes
+      hair: @state.hair
+      skin: @state.skin
+      bio: @state.bio
     $.ajax
       method: 'PUT'
       url: "/characters/#{ @props.description.id }"
       dataType: 'JSON'
       data:
         character: description
-      success: (description) =>
-        @props.handleUpdateCharacter @props.character, description
+      success: () =>
+        window.location.href = '/characters'
 
   render: ->
     React.DOM.div null,

@@ -9,6 +9,11 @@
     characters = React.addons.update(@state.characters, { $push: [character] })
     @setState characters: characters
 
+  updateCharacter: (character, description) ->
+    index = @state.characters.indexOf character
+    characters = React.addons.update(@state.characters, { $splice: [[index, 1, description]] })
+    @replaceState characters: characters
+
   deleteCharacter: (character) ->
     index = @state.characters.indexOf character
     characters = React.addons.update(@state.characters, { $splice: [[index, 1]] })
@@ -27,5 +32,6 @@
             React.DOM.th null, 'Level'
             React.DOM.th null, 'Actions'
         React.DOM.tbody null,
+          console.log 'Testing State: ', @state.characters
           for character in @state.characters
-            React.createElement Character, key: character.id, character: character, handleDeleteCharacter: @deleteCharacter, handleUpdateCharacter: @updateCharacter
+            React.createElement Character, key: character.id, character: character, handleDeleteCharacter: @deleteCharacter
