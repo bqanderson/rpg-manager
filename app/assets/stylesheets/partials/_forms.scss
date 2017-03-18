@@ -5,7 +5,8 @@
 form{
   margin:0;
 
-  input:not(.button):not(.linkButton):not([type="radio"]):not([type="checkbox"]):not(.qtyInput),textarea{
+  input:not(.button):not(.linkButton):not([type="radio"]):not([type="checkbox"]):not(.qtyInput),
+  input[type='textarea'], textarea{
     @include type-setting(-1);
     border: solid 1px display-color('max-bluegreen');
     padding: 0 1rem;
@@ -108,7 +109,6 @@ form{
       display:block;
       color: display-color('maastricht-blue');
       margin:20px auto 0;
-      text-decoraiton:underline;
     }
   }
 
@@ -162,6 +162,9 @@ input.qtyInput{
 }
 
 .new_tale, .edit_character, .new_character{
+  textarea{
+    @include type-setting(-1);
+  }
   input[type="submit"]{
     display: inline-block;
     @include type-setting(-1);

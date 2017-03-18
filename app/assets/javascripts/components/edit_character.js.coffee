@@ -143,8 +143,7 @@
             value: @state.skin
             onChange: @handleChange
         React.DOM.p null,
-          React.DOM.input
-            type: 'textarea'
+          React.DOM.textarea
             placeholder: 'Biography'
             name: 'bio'
             value: @state.bio

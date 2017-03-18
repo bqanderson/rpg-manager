@@ -1,12 +1,13 @@
-// Font weights
-$light: 200;
-$regular: 400;
+$display-font: 'Cinzel Decorative', cursive;
+
+// Text Font weights
+$regular: 200;
 $bold: 600;
-$black: 900;
 
 // Display fonts
 .super-heading {
   @include type-setting(3);
+  font-family: $display-font;
   color: display-color('maastricht-blue');
   font-weight: $bold;
   text-transform: uppercase;
@@ -14,14 +15,14 @@ $black: 900;
   text-align: center;
   padding: $base-line-height * 0.5 0 0 0;
   span.light {
-    font-weight: $light;
+    font-weight: $regular;
     letter-spacing: 0.25rem;
   }
 }
 
 .subheading {
   @include type-setting(-1);
-  font-weight: $light;
+  font-weight: $regular;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   text-align: center;
@@ -29,7 +30,8 @@ $black: 900;
 
 .heading-1 {
   @include type-setting(2);
-  font-weight: $light;
+  font-family: $display-font;
+  font-weight: $regular;
   text-transform: uppercase;
   letter-spacing: 0.056rem;
   text-align: center;
@@ -45,7 +47,7 @@ $black: 900;
 
 .item-name {
   @include type-setting(-1);
-  font-weight: $light;
+  font-weight: $regular;
   letter-spacing: 0.187rem;
 }
 
