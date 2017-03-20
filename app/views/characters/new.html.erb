@@ -5,6 +5,9 @@
   <div class="container">
     <section>
       <%= react_component 'NewCharacter' %>
+
+      <%= link_to 'Home', '/', class: "mybtn btn-primary" %>
+      <%= link_to 'View all characters', {controller: 'characters'}, class: "mybtn btn-primary" %>
     </section>
   </div>
 </main>

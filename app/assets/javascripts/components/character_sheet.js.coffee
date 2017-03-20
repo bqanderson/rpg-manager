@@ -10,12 +10,12 @@
       React.DOM.p
         className: 'paragraph'
         'Name: '
-        @props.description.name
+        @state.name
       React.DOM.p
         className: 'paragraph'
         'Class: '
-        @props.description.class_type
+        @state.class_type
       React.DOM.p
         className: 'paragraph'
         'Level: '
-        @props.description.level
+        @state.level
