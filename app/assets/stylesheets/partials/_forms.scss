@@ -5,18 +5,29 @@
 form{
   margin:0;
 
-  input:not(.button):not(.linkButton):not([type="radio"]):not([type="checkbox"]):not(.qtyInput),
-  input[type='textarea'], textarea{
+  textarea,
+  textarea.form-control,
+  select,
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"] {
     @include type-setting(-1);
     border: solid 1px display-color('max-bluegreen');
     padding: 0 1rem;
-    outline:none;
-    margin:0 0 $base-line-height;
-    -webkit-appearance:none;
+    box-shadow: none;
+    margin: 0 $base-line-height * 0.5 $base-line-height 0;
+    border-radius: 0;
 
-    &:not(textarea){
-      padding: 0 1rem;
-    }
     @include placeholder {
       color: display-color('max-bluegreen');
     }
@@ -31,7 +42,7 @@ form{
     margin:0 10px 0 0;
   }
 
-  textarea{
+  textarea {
     padding:10px;
   }
 }
@@ -110,26 +121,16 @@ input.qtyInput{
 }
 
 .new_tale, .edit_character, .new_character{
-  textarea{
-    @include type-setting(-1);
+  .bio {
+    width: $base-line-height * 24;
   }
-  input[type="submit"]{
-    display: inline-block;
-    @include type-setting(-1);
-    appearance: none;
-    background-color: display-color('max-bluegreen');
-    color: display-color('maastricht-blue');
-    border: solid 1px display-color('max-bluegreen');
-    padding: 0 1rem;
-    margin-right: $base-line-height * 0.5;
-    @include transition(all 0.3s);
-    &:hover {
-      background: none;
-      color: display-color('maastricht-blue');
-    }
+  .large {
+    width: $base-line-height * 8;
   }
-}
-
-.form-control {
-  outline: 0;
+  .medium {
+    width: $base-line-height * 4;
+  }
+  .small {
+    width: $base-line-height * 2;
+  }
 }
