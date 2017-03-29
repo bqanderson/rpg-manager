@@ -25,7 +25,7 @@ form{
     border: solid 1px display-color('max-bluegreen');
     padding: 0 1rem;
     box-shadow: none;
-    margin: 0 $base-line-height * 0.5 $base-line-height 0;
+    margin: 0 1vw $base-line-height 0;
     border-radius: 0;
 
     @include placeholder {
@@ -70,38 +70,6 @@ form{
       margin:20px auto 0;
     }
   }
-
-  label{
-    &:not(.showLabel){
-      text-align:left;
-      margin:0 0 10px;
-      display:none;
-    }
-
-    .showLabel{
-      display:inline-block;
-      vertical-align:middle;
-      margin:0 0 0 10px;
-    }
-  }
-
-  .pagination{
-    padding:0;
-    span:not(:last-child){
-      margin:0 10px 0 0;
-    }
-  }
-
-  .errors{
-    color:red;
-    padding:0 0 20px;
-  }
-}
-
-.addressLabel{
-  max-width:350px;
-  border-bottom:1px solid display-color('max-bluegreen');
-  margin:0 auto 20px auto;
 }
 
 input.qtyInput{
@@ -120,17 +88,12 @@ input.qtyInput{
   }
 }
 
-.new_tale, .edit_character, .new_character{
-  .bio {
-    width: $base-line-height * 24;
-  }
-  .large {
-    width: $base-line-height * 8;
-  }
-  .medium {
-    width: $base-line-height * 4;
-  }
-  .small {
-    width: $base-line-height * 2;
+.edit_character, .new_character{
+  .bio { width: 80vw; }
+  .large { width: 30vw; }
+  .medium { width: 12vw; }
+  .small { width: 6vw; }
+  label {
+    font-size: type-setting(-1);
   }
 }

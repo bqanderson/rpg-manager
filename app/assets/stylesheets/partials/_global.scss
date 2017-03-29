@@ -8,7 +8,7 @@
 
 // Root settings
 html {
-  background-color: display-color('white');
+  background-color: white;
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 14px;
   margin: 0 auto;
@@ -18,17 +18,17 @@ html {
 }
 
 a {
+  text-decoration: none;
+	color: display-color('maastricht-blue');
+  @include transition(color 0.3s);
+	&:hover {
+		color: display-color('max-bluegreen');
     text-decoration: none;
-		color: display-color('maastricht-blue');
-    @include transition(color 0.3s);
-		&:hover {
-			color: display-color('max-bluegreen');
-      text-decoration: none;
-		}
-
+	}
 }
 
 .container {
   width: 85%;
   margin: 0 auto;
+  padding: 0;
 }
