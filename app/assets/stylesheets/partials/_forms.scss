@@ -25,7 +25,7 @@ form{
     border: solid 1px display-color('max-bluegreen');
     padding: 0 1rem;
     box-shadow: none;
-    margin: 0 1vw $base-line-height 0;
+    margin: 0 1vw 0.5vh 0;
     border-radius: 0;
 
     @include placeholder {
@@ -83,17 +83,24 @@ input.qtyInput{
   outline:none;
   &:focus{
     ::-webkit-inner-spin-button {
-  opacity: 1
+      opacity: 1;
     }
   }
 }
 
 .edit_character, .new_character{
-  .bio { width: 80vw; }
-  .large { width: 30vw; }
-  .medium { width: 12vw; }
-  .small { width: 6vw; }
-  label {
-    font-size: type-setting(-1);
+  .form-group { margin: 0 1vw $base-line-height * 0.5 0; }
+  .bio {
+    width: 80vw;
+    font-size: 85%;
   }
+  .large {
+    width: 30vw;
+    font-size: 85%;
+  }
+  .medium {
+    width: 12vw;
+    font-size: 85%;
+  }
+  .small { width: 6vw; }
 }
