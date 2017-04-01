@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170303054819) do
+ActiveRecord::Schema.define(version: 20170331163133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abilities", force: :cascade do |t|
+    t.integer  "str"
+    t.integer  "str_mod"
+    t.integer  "dex"
+    t.integer  "dex_mod"
+    t.integer  "con"
+    t.integer  "con_mod"
+    t.integer  "int"
+    t.integer  "int_mod"
+    t.integer  "wis"
+    t.integer  "wis_mod"
+    t.integer  "cha"
+    t.integer  "cha_mod"
+    t.integer  "character_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["character_id"], name: "index_abilities_on_character_id", using: :btree
+  end
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
@@ -35,4 +54,5 @@ ActiveRecord::Schema.define(version: 20170303054819) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "abilities", "characters"
 end

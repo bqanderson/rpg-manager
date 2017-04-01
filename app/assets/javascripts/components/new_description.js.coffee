@@ -21,12 +21,13 @@
   handleChange: (e) ->
     name = e.target.name
     @setState "#{ name }": e.target.value
-
-  handleSubmit: (e) ->
-    e.preventDefault()
-    $.post '/characters', { character: @state }, (description) =>
-      'JSON'
-    window.location.href = '/characters'
+    console.log 'Current State: ', @state
+  #
+  # handleSubmit: (e) ->
+  #   e.preventDefault()
+  #   $.post '/characters', { character: @state }, (description) =>
+  #     'JSON'
+  #   window.location.href = '/characters'
 
   render: ->
     React.DOM.div null,
@@ -39,7 +40,7 @@
             className: 'form-control large'
             type: 'text'
             name: 'name'
-            value: @state.name
+            value: @props.name
             onChange: @handleChange
           React.DOM.label
             for: 'name'
@@ -50,7 +51,7 @@
             className: 'form-control large'
             type: 'text'
             name: 'class_type'
-            value: @state.class_type
+            value: @props.class_type
             onChange: @handleChange
           React.DOM.label
             for: 'name'
@@ -61,7 +62,7 @@
             className: 'form-control small'
             type: 'number'
             name: 'level'
-            value: @state.level
+            value: @props.level
             onChange: @handleChange
           React.DOM.label
             for: 'level'
@@ -72,7 +73,7 @@
             className: 'form-control medium'
             type: 'text'
             name: 'race'
-            value: @state.race
+            value: @props.race
             onChange: @handleChange
           React.DOM.label
             for: 'race'
@@ -83,7 +84,7 @@
             className: 'form-control large'
             type: 'text'
             name: 'alignment'
-            value: @state.alignment
+            value: @props.alignment
             onChange: @handleChange
           React.DOM.label
             for: 'alignment'
@@ -94,7 +95,7 @@
             className: 'form-control medium'
             type: 'text'
             name: 'deity'
-            value: @state.deity
+            value: @props.deity
             onChange: @handleChange
           React.DOM.label
             for: 'deity'
@@ -105,7 +106,7 @@
             className: 'form-control medium'
             type: 'text'
             name: 'size'
-            value: @state.size
+            value: @props.size
             onChange: @handleChange
           React.DOM.label
             for: 'size'
@@ -116,7 +117,7 @@
             className: 'form-control small'
             type: 'number'
             name: 'age'
-            value: @state.age
+            value: @props.age
             onChange: @handleChange
           React.DOM.label
             for: 'age'
@@ -127,7 +128,7 @@
             className: 'form-control medium'
             type: 'text'
             name: 'gender'
-            value: @state.gender
+            value: @props.gender
             onChange: @handleChange
           React.DOM.label
             for: 'gender'
@@ -138,7 +139,7 @@
             className: 'form-control small'
             type: 'number'
             name: 'height'
-            value: @state.height
+            value: @props.height
             onChange: @handleChange
           React.DOM.label
             for: 'height'
@@ -149,7 +150,7 @@
             className: 'form-control small'
             type: 'number'
             name: 'weight'
-            value: @state.weight
+            value: @props.weight
             onChange: @handleChange
           React.DOM.label
             for: 'weight'
@@ -160,7 +161,7 @@
             className: 'form-control medium'
             type: 'text'
             name: 'eyes'
-            value: @state.eyes
+            value: @props.eyes
             onChange: @handleChange
           React.DOM.label
             for: 'eyes'
@@ -171,7 +172,7 @@
             className: 'form-control medium'
             type: 'text'
             name: 'hair'
-            value: @state.hair
+            value: @props.hair
             onChange: @handleChange
           React.DOM.label
             for: 'hair'
@@ -182,7 +183,7 @@
             className: 'form-control medium'
             type: 'text'
             name: 'skin'
-            value: @state.skin
+            value: @props.skin
             onChange: @handleChange
           React.DOM.label
             for: 'skin'
@@ -192,13 +193,13 @@
           React.DOM.textarea
             className: 'form-control bio'
             name: 'bio'
-            value: @state.bio
+            value: @props.bio
             onChange: @handleChange
           React.DOM.label
             for: 'bio'
             'Biography'
-        React.DOM.p null,
-          React.DOM.a
-            className: 'mybtn btn-primary paragraph'
-            onClick: @handleSubmit
-            'Create Character'
+        # React.DOM.p null,
+        #   React.DOM.a
+        #     className: 'mybtn btn-primary paragraph'
+        #     onClick: @handleSubmit
+        #     'Create Character'

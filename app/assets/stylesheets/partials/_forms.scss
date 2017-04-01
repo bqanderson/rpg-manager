@@ -89,18 +89,12 @@ input.qtyInput{
 }
 
 .edit_character, .new_character{
-  .form-group { margin: 0 1vw $base-line-height * 0.5 0; }
-  .bio {
-    width: 80vw;
+  .form-group {
+    margin: 0 1vw $base-line-height * 0.5 0;
     font-size: 85%;
   }
-  .large {
-    width: 30vw;
-    font-size: 85%;
-  }
-  .medium {
-    width: 12vw;
-    font-size: 85%;
-  }
+  .bio { width: 81vw; }
+  .large { width: 30vw; }
+  .medium { width: 12vw; }
   .small { width: 6vw; }
 }
