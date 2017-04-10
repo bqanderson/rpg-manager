@@ -218,9 +218,11 @@
             React.DOM.label
               htmlFor: 'bio'
               'Biography'
+          # Abilities
           React.DOM.h2
             className: 'heading-2'
             'Ability Scores'
+          # Strength
           React.DOM.p null,
             React.DOM.div
               className: 'form-group'
@@ -241,6 +243,116 @@
                 type: 'number'
                 name: 'str_mod'
                 value: @props.str_mod
+                onChange: @handleChange
+          # Dexterity
+          React.DOM.p null,
+            React.DOM.div
+              className: 'form-group'
+              React.DOM.label
+                htmlFor: 'dex'
+                'Dexterity'
+              React.DOM.input
+                className: 'form-control small'
+                type: 'number'
+                name: 'dex'
+                value: @props.dex
+                onChange: @handleChange
+              React.DOM.label
+                htmlFor: 'dex_mod'
+                'Modifier'
+              React.DOM.input
+                className: 'form-control small'
+                type: 'number'
+                name: 'dex_mod'
+                value: @props.dex_mod
+                onChange: @handleChange
+          # Constitution
+          React.DOM.p null,
+            React.DOM.div
+              className: 'form-group'
+              React.DOM.label
+                htmlFor: 'con'
+                'Constitution'
+              React.DOM.input
+                className: 'form-control small'
+                type: 'number'
+                name: 'con'
+                value: @props.con
+                onChange: @handleChange
+              React.DOM.label
+                htmlFor: 'con_mod'
+                'Modifier'
+              React.DOM.input
+                className: 'form-control small'
+                type: 'number'
+                name: 'con_mod'
+                value: @props.con_mod
+                onChange: @handleChange
+            # Intelligence
+            React.DOM.p null,
+              React.DOM.div
+                className: 'form-group'
+                React.DOM.label
+                  htmlFor: 'int'
+                  'Intelligence'
+                React.DOM.input
+                  className: 'form-control small'
+                  type: 'number'
+                  name: 'int'
+                  value: @props.int
+                  onChange: @handleChange
+                React.DOM.label
+                  htmlFor: 'int_mod'
+                  'Modifier'
+                React.DOM.input
+                  className: 'form-control small'
+                  type: 'number'
+                  name: 'int_mod'
+                  value: @props.int_mod
+                  onChange: @handleChange
+          # Wisdom
+          React.DOM.p null,
+            React.DOM.div
+              className: 'form-group'
+              React.DOM.label
+                htmlFor: 'wis'
+                'Strength'
+              React.DOM.input
+                className: 'form-control small'
+                type: 'number'
+                name: 'wis'
+                value: @props.wis
+                onChange: @handleChange
+              React.DOM.label
+                htmlFor: 'wis_mod'
+                'Modifier'
+              React.DOM.input
+                className: 'form-control small'
+                type: 'number'
+                name: 'wis_mod'
+                value: @props.wis_mod
+                onChange: @handleChange
+          # Charisma
+          React.DOM.p null,
+            React.DOM.div
+              className: 'form-group'
+              React.DOM.label
+                htmlFor: 'cha'
+                'Strength'
+              React.DOM.input
+                className: 'form-control small'
+                type: 'number'
+                name: 'cha'
+                value: @props.cha
+                onChange: @handleChange
+              React.DOM.label
+                htmlFor: 'cha_mod'
+                'Modifier'
+              React.DOM.input
+                className: 'form-control small'
+                type: 'number'
+                name: 'cha_mod'
+                value: @props.cha_mod
                 onChange: @handleChange
       React.DOM.p null,
         React.DOM.a
