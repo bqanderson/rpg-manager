@@ -60,6 +60,7 @@
               className: 'form-control large'
               type: 'text'
               name: 'name'
+              placeholder: 'Name'
               value: @props.name
               onChange: @handleChange
             React.DOM.label

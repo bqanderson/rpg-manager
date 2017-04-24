@@ -29,7 +29,7 @@ form{
     border-radius: 0;
 
     @include placeholder {
-      color: display-color('max-bluegreen');
+      color: display-color('bright-yellow');
     }
     &:focus{
       border-color: display-color('maastricht-blue');
